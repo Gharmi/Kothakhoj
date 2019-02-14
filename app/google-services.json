@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "289486750510",
+    "firebase_url": "https://kothakhoj-47832.firebaseio.com",
+    "project_id": "kothakhoj-47832",
+    "storage_bucket": "kothakhoj-47832.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:289486750510:android:b297774a48216ced",
+        "android_client_info": {
+          "package_name": "com.project.kothakhoj"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "289486750510-kvsr6kktslce8ch00h5ma29t6el5fh37.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.project.kothakhoj",
+            "certificate_hash": "595fd6a2aa315d78fad99f07e536e549bb360d3a"
+          }
+        },
+        {
+          "client_id": "289486750510-6voqrm3hq5lbjrpqauuvfitb8omcbaku.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaWOuFfsIwG74eKq395-XjwDW1oUFwLIU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "289486750510-6voqrm3hq5lbjrpqauuvfitb8omcbaku.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

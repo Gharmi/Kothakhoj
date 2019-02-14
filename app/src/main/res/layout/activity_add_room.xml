@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/addRoomLayout"
+    android:background="@color/colorBackground2"
+    tools:context=".AddRoom">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/addRoomMsg"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#640b4a"
+            android:fontFamily="@font/roboto_medium"
+            android:padding="30dp"
+            android:textSize="16sp"
+            android:text="@string/roominfo"
+            android:background="#d2d1d1"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/roomDataScroll"
+        app:layout_constraintTop_toBottomOf="@id/addRoomMsg"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="100dp"
+            android:orientation="vertical">
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/edittext2_bg"
+                android:textColorHint="@color/colorTextColorHint">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:hint="Price*"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="0dp"
+                    android:background="@null"
+                    android:inputType="number"
+                    android:gravity="top|start"
+                    android:textColor="@color/colorTextColor"
+                    android:id="@+id/roomPrice"
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/edittext2_bg"
+                android:layout_marginEnd="10dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/roomAddress"
+                    android:visibility="gone"
+                    android:textSize="15sp"
+                    />
+                <fragment
+                    android:id="@+id/place_autocomplete_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+                    />
+            </RelativeLayout>
+
+
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:background="@drawable/edittext2_bg"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="10dp"
+                android:id="@+id/roomType"
+                android:spinnerMode="dropdown" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:background="@drawable/edittext2_bg"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="15dp"
+                android:id="@+id/roomPreference"
+                style="@android:style/Widget.Spinner"
+                android:spinnerMode="dropdown"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:text="Cooking:"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="@color/colorTextColor"/>
+
+                <RadioGroup
+                    android:id="@+id/radio_cooking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorTextColor"
+                        android:id="@+id/cooking_yes"
+                        android:textColor="@color/colorTextColor"
+                        android:text="Allowed"
+                        android:textSize="13sp"
+                        android:checked="true"
+                        />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cooking_no"
+                        android:textSize="13sp"
+                        android:buttonTint="@color/colorTextColor"
+                        android:textColor="@color/colorTextColor"
+                        android:text="Not Allowed" />
+
+                </RadioGroup>
+
+                <View
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorTextColor"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginEnd="3dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:text="Rent:"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="@color/colorTextColor"/>
+
+                <RadioGroup
+                    android:id="@+id/radio_negotiate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorTextColor"
+                        android:id="@+id/radio_negotiate_yes"
+                        android:textColor="@color/colorTextColor"
+                        android:text="Negotiable"
+                        android:textSize="13sp"
+                        android:checked="true"
+                        />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/radio_negotiate_no"
+                        android:textSize="13sp"
+                        android:buttonTint="@color/colorTextColor"
+                        android:textColor="@color/colorTextColor"
+                        android:text="Non-Negotiable" />
+
+                </RadioGroup>
+            </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:textColorHint="@color/colorTextColorHint"
+                    android:hint="Available Date"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="20dp"
+                    android:gravity="center|start"
+                    android:drawableEnd="@drawable/ic_calendar"
+                    android:background="@drawable/edittext2_bg"
+                    android:textColor="@color/colorTextColor"
+                    android:id="@+id/roomDate"
+                    />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:background="@drawable/edittext2_bg"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="10dp"
+                android:id="@+id/roomContact"
+                android:spinnerMode="dropdown" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:background="@drawable/edittext2_bg"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="10dp"
+                android:id="@+id/roomFloor"
+                android:spinnerMode="dropdown" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:id="@+id/updloadButton"
+                    android:background="@drawable/buttonbg2">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_photo"/>
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Select room pics to upload"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:id="@+id/photo_status"
+                    android:textColor="@color/colorBlack50"
+                    android:text="@string/photo_info"
+                    android:layout_gravity="center"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_margin="15dp"
+                android:text="Upload"
+                android:id="@+id/room_upload"
+                android:background="@drawable/button3"
+                />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/progress_addRoom"
+        android:background="@color/colorBlue50"
+        android:visibility="gone">
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/colorPrimaryDark"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>

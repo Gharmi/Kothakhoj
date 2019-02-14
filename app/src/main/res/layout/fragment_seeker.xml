@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:id="@+id/seekerMain"
+    tools:context=".SeekerFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:weightSum="1"
+            android:visibility="gone"
+            android:id="@+id/filter_options"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:baselineAligned="false">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:visibility="visible"
+                    android:id="@+id/addressFilter"
+                    android:background="@drawable/edittext2_bg"
+                    android:layout_marginEnd="10dp">
+
+                    <fragment
+                        android:id="@+id/place_autocomplete_fragment1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+                        />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:id="@+id/priceFilter">
+
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_height="54dp"
+                        android:layout_weight="0.3"
+                        android:inputType="number"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/white"
+                        android:id="@+id/filter_min"
+                        android:fontFamily="@font/roboto_medium"
+                        android:backgroundTint="@android:color/white"
+                        android:hint="Min:"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="—"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:gravity="center"
+                        android:layout_marginStart="3dp"
+                        android:layout_weight="0.3"
+                        android:inputType="number"
+                        android:id="@+id/filter_max"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/white"
+                        android:fontFamily="@font/roboto_medium"
+                        android:backgroundTint="@android:color/white"
+                        android:hint="Max:"/>
+
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:padding="10dp"
+                        android:background="@drawable/button_background"
+                        android:layout_marginStart="2dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Filter"
+                        android:id="@+id/filter_btn"
+                        android:layout_weight="0.3"
+                        android:drawableStart="@drawable/ic_filter"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textAllCaps="false"
+                        />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="54dp"
+                android:layout_weight="0.4"
+                android:background="@drawable/edittext2_bg"
+                android:id="@+id/filter1"
+                android:spinnerMode="dropdown" />
+
+        </LinearLayout>
+
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshSeeker"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/recyclerView"/>
+
+            </LinearLayout>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+    </LinearLayout>
+
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:indeterminate="true"
+        android:layout_gravity="center"
+        />
+
+</FrameLayout>

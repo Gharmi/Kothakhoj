@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#623255</color>
+    <color name="colorPrimaryDark">#630949</color>
+    <color name="colorAccent">#556232</color>
+
+
+    <!--my colors-->
+    <color name="colorPrimaryDark50">#80630949</color>
+    <color name="colorPrimary50">#3f623255</color>
+    <color name="colorOrangeButton">#d65415</color>
+    <color name="colorOrangeButton50">#7fd65415</color>
+    <color name="colorProgressBackground">#ad3b1139</color>
+    <color name="colorEditTextBackground">#5a325d</color>
+    <color name="colorAppLogo">#cd1348</color>
+    <color name="colorWhite20">#2cffffff</color>
+    <color name="colorWhite50">#80ffffff</color>
+    <color name="colorWhite75">#c0ffffff</color>
+    <color name="colorPrimaryNavigation">#a84142</color>
+    <color name="colorActionBar">#62323d</color>
+    <color name="colorTextColor">#640b4a</color>
+    <color name="colorTextColorHint">#a5640b4a</color>
+    <color name="colorEditTextBackground2">#bdd2d1d1</color>
+    <color name="colorBlack50">#a8000000</color>
+    <color name="colorBackground2">#efefef</color>
+    <color name="colorBlue">#004d84</color>
+    <color name="colorBlue50">#81004d84</color>
+    <color name="colorTransparent">@android:color/transparent</color>
+    <color name="colorGrey50">#89908e9c</color>
+
+
+    <color name="place_autocomplete_search_text">@color/colorTextColor</color>
+    <color name="place_autocomplete_search_hint">@color/colorTextColor</color>
+
+</resources>

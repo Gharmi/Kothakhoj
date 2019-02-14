@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/colorPrimary"
+    android:theme="@style/AppTheme.NoActionBar"
+    tools:context=".LoginFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:id="@+id/login_linear"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name_str"
+                android:textSize="34sp"
+                android:drawableTop="@drawable/ic_kothakhoj_logo_medium"
+                android:fontFamily="@font/roboto_bold"
+                android:id="@+id/logo_login"
+                />
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="30dp"
+                android:background="@null"
+                android:layout_height="@dimen/input_layout_height">
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/email"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@android:color/white"
+                    android:padding="10dp"
+                    android:id="@+id/mail_et_log"
+                    android:inputType="textEmailAddress"
+                    android:background="@drawable/edittext_background"
+                    />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="30dp"
+                android:background="@null"
+                android:layout_height="@dimen/input_layout_height">
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/password"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@android:color/white"
+                    android:padding="10dp"
+                    android:id="@+id/pass_et_log"
+                    android:inputType="textPassword"
+                    android:background="@drawable/edittext_background"
+                    />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginTop="45dp"
+                android:background="@drawable/button_background"
+                android:text="@string/login"
+                android:textColor="@android:color/white"
+                android:id="@+id/login_btn_log"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_gravity="center"
+            android:layout_marginTop="45dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/login_linear"
+            android:layout_centerHorizontal="true"
+            android:text="@string/register_msg"
+            android:textSize="16sp"
+            android:id="@+id/register_option"
+            android:textColor="@color/colorWhite50"
+            android:fontFamily="@font/roboto_bold"
+            android:layout_alignParentBottom="true"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/progress_login"
+        android:background="@color/colorProgressBackground"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            />
+    </RelativeLayout>
+
+
+</FrameLayout>
